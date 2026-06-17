@@ -347,7 +347,7 @@ This project helped in understanding:
 
 **Anisha Tenali**
 
-B.Tech CSE (AI & ML)
+B.Tech CSE 
 
 Passionate about Machine Learning, Data Science, NLP, Recommendation Systems, and AI-powered products.
 
