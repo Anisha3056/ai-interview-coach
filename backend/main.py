@@ -37,3 +37,9 @@ app.include_router(
     prefix="/interview",
     tags=["interview"]
 )
+
+@app.get("/")
+async def home():
+    return {
+        "message": "AI Interview Coach API is running 🚀"
+    }
