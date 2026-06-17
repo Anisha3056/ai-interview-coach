@@ -4,7 +4,8 @@ AI Interview Coach is a full-stack Generative AI application that helps candidat
 
 The platform analyzes a candidate's resume, identifies suitable career paths, generates tailored interview questions, evaluates responses, and highlights missing concepts for continuous improvement.
 
-# LIVE DEMO: https://ai-interview-coach-self.vercel.app/
+# LIVE DEMO: 
+https://ai-interview-coach-self.vercel.app/
 
 ---
 
