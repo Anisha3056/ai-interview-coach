@@ -6,3 +6,4 @@ python-dotenv
 PyPDF2
 google-genai
 requests
+pypdf
