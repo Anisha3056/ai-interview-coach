@@ -46,15 +46,13 @@ function ResumeUpload({ setAnalysis }) {
         );
 
     }
-    catch (error) {
-
-        console.error(error);
-
-        alert(
-            "Resume upload failed"
-        );
-
-    }
+    catch(error) {
+    alert(
+        error.response?.data?.detail ||
+        error.message ||
+        "Resume upload failed"
+    );
+}
     finally {
 
         setLoading(false);
