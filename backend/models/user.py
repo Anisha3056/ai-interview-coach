@@ -22,4 +22,4 @@ class User(Base):
         unique=True
     )
 
-    password = Column(String)
+    password_hash = Column(String)

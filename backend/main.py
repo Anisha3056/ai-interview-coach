@@ -12,16 +12,14 @@ from routes.interview import (
     router as interview_router
 )
 
+from routes.auth import (
+    router as auth_router
+)
+
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
 
-from sqlalchemy import inspect
 
-inspector = inspect(engine)
-
-print("Tables in DB:",
-      inspector.get_table_names())
-print(Base.metadata.tables.keys())
 app.add_middleware(
     CORSMiddleware,
 
@@ -48,6 +46,12 @@ app.include_router(
     interview_router,
     prefix="/interview",
     tags=["interview"]
+)
+
+app.include_router(
+    auth_router,
+    prefix="/auth",
+    tags=["auth"]
 )
 
 @app.get("/")
