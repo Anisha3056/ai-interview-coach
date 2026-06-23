@@ -3,6 +3,9 @@ from fastapi import FastAPI
 from database.db import engine
 from database.db import Base
 from models.user import User
+from models.interview_sessions import InterviewSession
+    
+
 
 from routes.resume import (
     router as resume_router
@@ -18,7 +21,6 @@ from routes.auth import (
 
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
-
 
 app.add_middleware(
     CORSMiddleware,
