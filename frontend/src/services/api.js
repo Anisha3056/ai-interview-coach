@@ -55,3 +55,27 @@ export const evaluateAnswer = async (
 
     return response.data;
 };
+
+export const getProgress = async (
+    userId
+) => {
+
+    const response =
+        await API.get(
+            `/interview/progress/${userId}`
+        );
+
+    return response.data;
+};
+
+export const getHistory = async (
+    userId
+) => {
+
+    const response =
+        await API.get(
+            `/interview/history/${userId}`
+        );
+
+    return response.data;
+};

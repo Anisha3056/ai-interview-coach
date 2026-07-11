@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function EvaluationPage({
     evaluation,
@@ -8,6 +9,9 @@ function EvaluationPage({
 
     const [notes, setNotes] =
         useState("");
+    
+    const navigate =
+    useNavigate();
 
     useEffect(() => {
 
@@ -195,6 +199,18 @@ function EvaluationPage({
             >
                 Next Question
             </button>
+
+            <button
+    onClick={() =>
+        navigate(
+            "/dashboard"
+        )
+    }
+>
+
+    View Dashboard
+
+</button>
 
             <hr />
 

@@ -4,9 +4,8 @@ from database.db import engine
 from database.db import Base
 from models.user import User
 from models.interview_sessions import InterviewSession
+
     
-
-
 from routes.resume import (
     router as resume_router
 )
@@ -61,3 +60,4 @@ async def home():
     return {
         "message": "AI Interview Coach API is running 🚀"
     }
+    

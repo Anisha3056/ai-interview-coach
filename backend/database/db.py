@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import declarative_base
 import os
@@ -19,3 +19,4 @@ SessionLocal = sessionmaker(
 )
 
 Base = declarative_base()
+

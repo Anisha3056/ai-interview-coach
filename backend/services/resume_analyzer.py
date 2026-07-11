@@ -1,4 +1,5 @@
 from google import genai
+import time
 from dotenv import load_dotenv
 import os
 import json
@@ -27,11 +28,18 @@ def analyze_resume(resume_text):
         "recommended_roles": []
     }}
     """
-
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt
-    )
+    for attempt in range(3):
+        try:
+            response = client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=prompt
+            )
+            break
+        except Exception as e:
+            if attempt < 2:
+                time.sleep(2)
+            else:
+                raise
 
     response_text = response.text
     response_text = response_text.replace("```json", "")
