@@ -198,6 +198,10 @@ async () => {
                     DevOps Engineer
                 </option>
 
+                <option>
+                    UI / UX Designer
+                </option>
+
             </select>
 
             <select
@@ -229,6 +233,10 @@ async () => {
 
     <option>
         DSA
+    </option>
+
+    <option>
+        CS Fundamentals
     </option>
 
 </select>
